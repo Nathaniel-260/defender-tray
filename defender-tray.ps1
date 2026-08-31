@@ -23,7 +23,7 @@ if (-not $CheckOnly -and
 $mutex = $null
 if (-not $CheckOnly) {
     $isNewInstance = $false
-    $mutex = New-Object Threading.Mutex($true, 'Local\OtzariaDefenderTray', [ref]$isNewInstance)
+    $mutex = New-Object Threading.Mutex($true, 'Local\DefenderTray', [ref]$isNewInstance)
     if (-not $isNewInstance) { exit }
 }
 
@@ -222,7 +222,7 @@ function Invoke-Toggle {
 
 # ---------------------------------------------------------------- הפעלה בהתחברות
 
-$taskName = 'OtzariaDefenderTray'
+$taskName = 'DefenderTray'
 
 function Test-StartupTask {
     $null -ne (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue)

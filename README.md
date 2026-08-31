@@ -132,7 +132,7 @@ Defender **לא מחיל את השינוי מיד**. לאחר לחיצה על ה
 
 ## הפעלה עם ההתחברות
 
-הפריט `הפעלה עם ההתחברות` רושם משימה מתוזמנת בשם `OtzariaDefenderTray`:
+הפריט `הפעלה עם ההתחברות` רושם משימה מתוזמנת בשם `DefenderTray`:
 
 * טריגר: התחברות משתמש
 * רמת הרצה: **Highest** — כך הכלי עולה מורם **בלי בקשת UAC** בכל התחברות
@@ -143,7 +143,7 @@ Defender **לא מחיל את השינוי מיד**. לאחר לחיצה על ה
 הסרה ידנית:
 
 ```powershell
-Unregister-ScheduledTask -TaskName 'OtzariaDefenderTray' -Confirm:$false
+Unregister-ScheduledTask -TaskName 'DefenderTray' -Confirm:$false
 ```
 
 ---
